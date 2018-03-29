@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+{{super()}}
+<h2> Login! </h2>
+
+{{message2}}
+
+<br>
+<form action="/login/" method="post">
+  <b>Username: </b>
+  <input name="idask" placeholder="Username" type="text"> <br>
+<br>
+  <b>Password: </b>
+  <input name="passwordz" placeholder="Password" type="password"> <br>
+
+<br>
+  <input type="submit">
+    </form>
+
+<br><br>
+<a href="{{ url_for('general.show_frontpage') }}">Or go back to main page.</a>
+<br>
+
+{% endblock %}

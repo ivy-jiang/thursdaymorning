@@ -1,0 +1,18 @@
+{% extends "original.html" %}
+
+{% block content %}
+{{super()}}
+
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+
+      {% for message in messages %}
+      <br>
+        <b>{{ message }}</b><br>
+      {% endfor %}
+
+    {% endif %}
+  {% endwith %}
+  <br>
+
+{% endblock %}
